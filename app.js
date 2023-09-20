@@ -3,7 +3,7 @@ const app = express();
 const userRoute = require('./router/userRouter');
 const assignmentRoute = require('./router/assignmentRouter');
 
-
+app.use(express.json());
 app.use('/api', userRoute);
 app.use('/api', assignmentRoute);
 
